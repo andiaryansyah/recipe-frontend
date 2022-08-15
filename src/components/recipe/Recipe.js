@@ -17,6 +17,7 @@ const Recipe = () => {
 
 useEffect(() => {
   dispatch(FilterRecipes(recipe));
+   // eslint-disable-next-line
 }, [recipe]);
 
   return (

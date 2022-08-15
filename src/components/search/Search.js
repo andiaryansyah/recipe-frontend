@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import "./Search.css";
 import {useDispatch, useSelector} from 'react-redux';
-import { FilterRecipes, getRecipes, setRecipes } from '../../store/action';
+import { FilterRecipes } from '../../store/action';
 
 const Search = () => {
 const dispatch = useDispatch();
@@ -13,7 +13,7 @@ useEffect(() => {
     return recipes.title.toLowerCase().includes(search.toLowerCase());
   });
   dispatch(FilterRecipes(results));
-  console.log(results);
+   // eslint-disable-next-line
 },[search]);
 
 
