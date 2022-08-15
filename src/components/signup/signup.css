@@ -1,0 +1,47 @@
+#btnSignup {
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 2;
+    height: 40px;
+    line-height: 14px;
+    transition: all 150ms linear;
+    width: 100px;
+    border-radius: 0px;
+    letter-spacing: 1px;    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 12px 35px 0 rgba(16, 39, 112, .25);
+    outline: 0;
+    text-transform: capitalize;
+    background-color: #131212;
+    color:white;
+  }
+  
+  #btnSignup:hover{
+    background-color: white;
+    color:#131212;
+    border:solid #131212;
+  }
+
+  .cursorLink {
+    cursor: pointer;
+    color: black;
+    margin-top: 12px;
+  }
+  
+  .cursorLink:hover {
+    color: rgb(84, 84, 84);
+  }
+
+  .center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

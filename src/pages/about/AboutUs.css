@@ -1,0 +1,32 @@
+.about {
+    text-align: left;
+    /* background-color: #ccc; */
+    margin: 0;
+    padding: 25px;
+    color: #444;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .about h2 {
+    font-size: 30px;
+    margin-bottom:10px;
+  }
+  
+  @media (max-width:767px){
+    .about h2 {
+      font-size: 20px;
+    }
+  }
+  
+  .hero {
+  display: flex;
+  padding: 20px;
+  width: 95vw;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  /* height: 90vh; */
+  }

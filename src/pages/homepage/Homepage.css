@@ -1,0 +1,139 @@
+#btnSlide1 {
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 2;
+    height: 50px;
+    line-height: 14px;
+    transition: all 150ms linear;
+    width: 150px;
+    border-radius: 0px;
+    letter-spacing: 1px;    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    border:solid 1px white;
+    cursor: pointer;
+    /* box-shadow: 0 12px 35px 0 rgba(16, 39, 112, .25); */
+    outline: 0;
+    text-transform: capitalize;
+    background-color: transparent;
+    color:white;
+  }
+  
+  #btnSlide1:hover{
+    color:black;
+    background-color: white;
+    border: none;
+  }
+
+  #btnSlide2 {
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 2;
+    height: 50px;
+    line-height: 14px;
+    transition: all 150ms linear;
+    width: 150px;
+    border-radius: 0px;
+    letter-spacing: 1px;    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    border:solid 1px white;
+    cursor: pointer;
+    /* box-shadow: 0 12px 35px 0 rgba(16, 39, 112, .25); */
+    outline: 0;
+    text-transform: capitalize;
+    background-color: transparent;
+    color:white;
+  }
+  
+  #btnSlide2:hover{
+    color:black;
+    background-color: white;
+    border: none;
+  }
+
+  #btnRecipes {
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 2;
+    height: 50px;
+    line-height: 14px;
+    transition: all 150ms linear;
+    width: 200px;
+    border-radius: 22px;
+    letter-spacing: 1px;    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    border:solid 1px black;
+    cursor: pointer;
+    /* box-shadow: 0 12px 35px 0 rgba(16, 39, 112, .25); */
+    outline: 0;
+    text-transform: capitalize;
+    background-color: white;
+    color:black;
+  }
+  
+  #btnRecipes:hover{
+    color:white;
+    background-color: black;
+    border: none;
+  }
+
+  #btnAbout {
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 2;
+    height: 50px;
+    line-height: 14px;
+    transition: all 150ms linear;
+    width: 130px;
+    border-radius: 22px;
+    letter-spacing: 1px;    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    border:solid 2px white;
+    cursor: pointer;
+    /* box-shadow: 0 12px 35px 0 rgba(16, 39, 112, .25); */
+    outline: 0;
+    text-transform: capitalize;
+    background-color: transparent;
+    color:white;
+  }
+  
+  #btnAbout:hover{
+    color:black;
+    background-color: white;
+    border: none;
+  }
+
+  .change {
+    background-color: red;
+    opacity: 20%;
+  }
+
+  .cardText {
+    padding-left: 200px;
+    padding-right: 200px;
+    font-size: 22px;
+   line-height: 35px;
+  }
