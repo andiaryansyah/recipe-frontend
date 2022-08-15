@@ -107,7 +107,7 @@ const Homepage = () => {
           className="mt-3 mb-5"
         >
           <Card>
-            <Card.Img variant="top" width={786} height={460} src={Silde1} />
+            <Card.Img variant="top" height={460} src={Silde1} />
             <Card.ImgOverlay className="mt-5 text-light pt-5">
               <Card.Title className="mt-3">
                 <h1>
