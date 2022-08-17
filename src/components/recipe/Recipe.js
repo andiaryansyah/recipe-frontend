@@ -22,8 +22,8 @@ useEffect(() => {
 
   return (
     <div className="container">
-      {filterRecipe.length === 0 ? 
-      <h1>Not Found</h1> :
+      {/* {filterRecipe.length === 0 ? 
+      <h1>Not Found</h1> : */}
         <Row xs={1} md={3} className="g-4 center">
           {filterRecipe && filterRecipe.map((recipe) => (
             <Col key={recipe.id}>
@@ -57,7 +57,7 @@ useEffect(() => {
             </Col>
           ))}
         </Row>
-}
+{/* } */}
     </div>
   );
 };
