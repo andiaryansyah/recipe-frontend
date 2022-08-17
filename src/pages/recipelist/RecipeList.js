@@ -23,7 +23,7 @@ useEffect(() => {
     <>
       <Container>
         <Search />
-          <div>
+          <div className="d-flex align-items-center justify-content-center">
           {filterRecipe.length === 0 ? 
       <h1>Not Found</h1> :
             <Recipe />
