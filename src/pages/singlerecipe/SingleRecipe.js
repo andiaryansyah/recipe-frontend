@@ -17,7 +17,7 @@ const SingleRecipe = () => {
 
   const getAllByUserId = async () => {
     const response = await axios.get(
-      `http://localhost:3000/api/users/${user_id}/recipes/${id}`
+      `https://secure-falls-46921.herokuapp.com/api/users/${user_id}/recipes/${id}`
     );
     setRecipes(response.data);
   };

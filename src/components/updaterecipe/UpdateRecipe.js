@@ -45,7 +45,7 @@ const UpdateRecipe = () => {
 
   const getRecipeById = async () => {
     const response = await axios.get(
-      `http://localhost:3000/api/users/${user_id}/recipes/${id}`,
+      `https://secure-falls-46921.herokuapp.com/api/users/${user_id}/recipes/${id}`,
       {
         headers: {
           authorization: `Bearer ${decodeJWT().token}`,
@@ -91,7 +91,7 @@ const UpdateRecipe = () => {
     formData.append("ingredients", ingredients);
     try {
       await axios.put(
-        `http://localhost:3000/api/users/${user_id}/recipes/${id}`,
+        `https://secure-falls-46921.herokuapp.com/api/users/${user_id}/recipes/${id}`,
         formData,
         {
           headers: {

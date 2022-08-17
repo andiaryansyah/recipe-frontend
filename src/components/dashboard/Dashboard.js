@@ -22,7 +22,7 @@ const Dashboard = () => {
     user_id = decoded.userId;
     setId(user_id);
     const response = await axios.get(
-      `http://localhost:3000/api/users/${user_id}/recipes`,
+      `https://secure-falls-46921.herokuapp.com/api/users/${user_id}/recipes`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -35,7 +35,7 @@ const Dashboard = () => {
   const deleteRecipe = async (recipeId) => {
     try {
       await axios.delete(
-        `http://localhost:3000/api/users/${id}/recipes/${recipeId}`,
+        `https://secure-falls-46921.herokuapp.com/api/users/${id}/recipes/${recipeId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

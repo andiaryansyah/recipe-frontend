@@ -16,7 +16,7 @@ export const getRecipes = () => {
     return async(dispatch) => {
         try {
             dispatch(setLoading(true));
-            await axios.get('http://localhost:3000/api/recipes')
+            await axios.get('https://secure-falls-46921.herokuapp.com/api/recipes')
             .then((res) => {
             dispatch(setLoading(false));
                 dispatch(setRecipes(res.data))

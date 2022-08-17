@@ -65,7 +65,7 @@ const AddRecipe = () => {
     formData.append("ingredients", ingredients);
     try {
       await axios.post(
-        `http://localhost:3000/api/users/${decodeJWT().decoded.userId}/recipes`,
+        `https://secure-falls-46921.herokuapp.com/api/users/${decodeJWT().decoded.userId}/recipes`,
         formData,
         {
           headers: {

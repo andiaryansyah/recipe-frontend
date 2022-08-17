@@ -21,7 +21,7 @@ const Signup = () => {
       setMsg("Password and confirm password is do not match");
     } else {
       try {
-        await axios.post("http://localhost:3000/api/users", {
+        await axios.post("https://secure-falls-46921.herokuapp.com/api/users", {
           name: `${firstName} ${lastName}`,
           email,
           password,
