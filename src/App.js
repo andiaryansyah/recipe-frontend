@@ -20,7 +20,7 @@ function App() {
     <Navbarr/>
       <Suspense fallback={<Spinners />}>
       <Routes>
-        <Route path="/" element={<Homepage/>} />
+        <Route path="https://bespoke-mochi-dfc8f2.netlify.app/" element={<Homepage/>} />
         <Route path="/recipelist" element={<Recipelist/>} />
         <Route path="/dashboard" element={<Dashboard/>} />
         <Route path="/addrecipe" element={<AddRecipe/>} />
