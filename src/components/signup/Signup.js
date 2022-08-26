@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, Row, Col, Card, Button } from "react-bootstrap";
-import bg from "../../assets/img/BGSignin.jpg";
+import bg from "../../assets/img/new.jpg";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./signup.css";
@@ -38,9 +38,13 @@ const Signup = () => {
 
   return (
     <>
-      <Card className="bg-dark text-dark">
-        <Card.Img src={bg} alt="Card image" height={560} />
-        <Card.ImgOverlay>
+    <Row>
+      <Col>
+      <Card className="bg-dark text-dark" id="Card">
+        <Card.Img src={bg} alt="Card image" height={573} />
+      </Card>
+      </Col>
+      <Col>
           <div className="center">
             <Form
               className="container mt-5 p-4"
@@ -117,8 +121,8 @@ const Signup = () => {
               </Card.Link>
             </Form>
           </div>
-        </Card.ImgOverlay>
-      </Card>
+        </Col>
+      </Row>
     </>
   );
 };

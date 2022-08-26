@@ -49,22 +49,12 @@ const Dashboard = () => {
   };
   return (
     <div className="container-fluid">
-      <div className="mb-4 mt-3">
-        <Button
-          href="/addrecipe"
-          variant="success"
-          style={{ width: "8 rem", marginRight: "0.5rem" }}
-        >
-          New Recipe +
-        </Button>
-      </div>
-
-      <Row xs={1} md={5} className="g-3">
+      <Row xs={1} md={5} className="g-3 mt-3">
         {recipes.map((recipe) => (
           <Col key={recipe.id}>
             <Card
               style={{ width: "15rem", height: "20rem" }}
-              className=" border border-0 border-dark"
+              className=" border-0 border-dark"
             >
               <Card.Img
                 variant="top"

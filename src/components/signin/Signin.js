@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import bg from "../../assets/img/BGSignin.jpg";
-import { Card, Form, Button } from "react-bootstrap";
+import bg from "../../assets/img/new.jpg";
+import { Card, Form, Button, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import axios from "axios";
@@ -29,10 +29,14 @@ const Signin = () => {
   };
   return (
     <>
-      
-        <Card className="bg-dark text-dark ">
-          <Card.Img src={bg} alt="Card image" height={560} />
-          <Card.ImgOverlay>
+      <Row>
+      <Col>
+        <Card className="bg-dark text-dark " id="Card">
+          
+          <Card.Img src={bg} alt="Card image" height={573} />
+          </Card>
+          </Col>
+          <Col className="mt-5">
             <Card.Title className=" mt-5 center">
               <h1>
                 <b>SIGN IN TO YOUR ACCOUNT</b>
@@ -74,13 +78,13 @@ const Signin = () => {
               <h5 className="mb-2 center">
                 {msg}
               </h5>
-              <div  className="mb-2 center">
+              <div  className="mb-4 center">
                 <Button id="btnLogin" type="submit">
                   Login
                 </Button>
               </div>
               <div className="center">
-                <Card.Link className="cursorLink">
+                <Card.Link className="cursorLink" style={{ marginRight: "30px" }}>
                   forgot your password ?
                 </Card.Link>
                 <Card.Link className="cursorLink" href="/signup">
@@ -89,9 +93,9 @@ const Signin = () => {
               </div>
               </Form>
             </div>
-          </Card.ImgOverlay>
-        </Card>
-      
+          </Col>
+       
+        </Row>
     </>
   );
 };

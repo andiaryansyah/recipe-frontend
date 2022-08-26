@@ -9,6 +9,7 @@ import {
 } from "react-bootstrap";
 // import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Sidebar from '../Sidebar/Sidebar'
 import Cookies from "js-cookie";
 import jwt_decode from "jwt-decode";
 import "./Navbarr.css";
@@ -42,9 +43,9 @@ const Navbarr = () => {
           expand={expand}
         >
           <Container>
-            <Navbar.Brand href="#">YouCanMakeIt</Navbar.Brand>
             {isLogin ? (
               <>
+                  <Sidebar />
                 <Navbar.Toggle
                   aria-controls={`offcanvasNavbar-expand-${expand}`}
                 />
@@ -54,6 +55,7 @@ const Navbarr = () => {
                   placement="end"
                 >
                   <Offcanvas.Header closeButton>
+
                     <Offcanvas.Title
                       id={`offcanvasNavbarLabel-expand-${expand}`}
                     >
@@ -61,16 +63,11 @@ const Navbarr = () => {
                     </Offcanvas.Title>
                   </Offcanvas.Header>
                   <Offcanvas.Body>
-                    <Nav className="align-items-center justify-content-end flex-grow-1 pe-3" style={{marginLeft:"110px"}}>
-                      <Nav.Link href="/" className="nav-link">Home</Nav.Link>
-                      <Nav.Link href="/dashboard" className="nav-link">Dashboard</Nav.Link>
-                      <Nav.Link href="/recipelist" className="nav-link">Recipes</Nav.Link>
-                    </Nav>
-                    <Nav className="align-items-center justify-content-end flex-grow-1 pe-3">
+                    <Nav className="md:align-items-center justify-content-end flex-grow-1 pe-3">
                       <Navbar.Text>Sign in as :</Navbar.Text>
                       <NavDropdown
                         variant="dark"
-                        title={ <span className="text-light ">{name}</span>}
+                        title={ <span className="text-gray-500 ">{name}</span>}
                         id={`offcanvasNavbarDropdown-expand-${expand}`}
                       >
                         <NavDropdown.Item href="#action3">
@@ -87,6 +84,7 @@ const Navbarr = () => {
               </>
             ) : (
               <>
+            <Navbar.Brand href="#">YouCanMakeIt</Navbar.Brand>
               <Nav className=" nav-links">
                       <Nav.Link href="/" className="nav-link">Home</Nav.Link>
                       <Nav.Link href="/recipelist" className="nav-link">Recipes</Nav.Link>

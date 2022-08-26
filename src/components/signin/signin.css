@@ -44,3 +44,7 @@
   align-items: center;
   justify-content: center;
 }
+
+#Card {
+  border-radius: 0;
+}

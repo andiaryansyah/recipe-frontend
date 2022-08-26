@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Footer from "../../components/footer/Footer";
-import Silde1 from "../../assets/img/slide1.jpg";
+import Silde1 from "../../assets/img/BGSignin.jpg";
 import "./AboutUs.css";
 
 const AboutUs = () => {

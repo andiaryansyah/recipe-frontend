@@ -29,7 +29,7 @@ useEffect(() => {
             <Col key={recipe.id}>
               <Card 
                 style={{ width: "23rem" }}
-                className=" border border-0 border-dark"
+                className=" border border-0px border-dark"
               >
                 <Card.Img
                   variant="top"

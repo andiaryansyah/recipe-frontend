@@ -1,28 +1,28 @@
 #btnEdit {
     width: 4.7rem;
     margin-right: 0.5rem;
-    border: solid 2px #2649f9;
+    /* border: solid 2px #2649f9;
     background-color: #93a5fd;
-    color:black;
+    color:black; */
     /* border-radius: 0px; */
 }
 
-#btnEdit:hover {
+/* #btnEdit:hover {
     background-color: #2649f9;
-}
+} */
 
 #btnDelete {
     width: 4.7rem;
     margin-right: 0.5rem;
-    border: solid 2px #f11b1b;
+    /* border: solid 2px #f11b1b;
     background-color: #fd9393;
-    color:black;
+    color:black; */
     /* border-radius: 0px; */
 }
 
-#btnDelete:hover {
+/* #btnDelete:hover {
     background-color: #f11b1b;
-}
+} */
 
 .details {
     font-family:Arial, Helvetica, sans-serif;
