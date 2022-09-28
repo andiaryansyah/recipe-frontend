@@ -48,8 +48,9 @@ const Dashboard = () => {
     }
   };
   return (
-    <div className="container-fluid">
-      <Row xs={1} md={5} className="g-3 mt-3">
+    <>
+    <div className="container-fluid d-recipe">
+      <Row xs={1} md={4} lg={4} className="mt-4">
         {recipes.map((recipe) => (
           <Col key={recipe.id}>
             <Card
@@ -99,6 +100,7 @@ const Dashboard = () => {
         ))}
       </Row>
     </div>
+    </>
   );
 };
 

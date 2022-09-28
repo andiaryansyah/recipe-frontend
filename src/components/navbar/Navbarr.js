@@ -6,10 +6,10 @@ import {
   Nav,
   Offcanvas,
   Button,
+  Form,
 } from "react-bootstrap";
 // import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import Sidebar from '../Sidebar/Sidebar'
+import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import jwt_decode from "jwt-decode";
 import "./Navbarr.css";
@@ -37,6 +37,7 @@ const Navbarr = () => {
     <>
       {["xl"].map((expand) => (
         <Navbar
+          className="nav-style"
           key={expand}
           bg="dark"
           variant="dark"
@@ -45,7 +46,8 @@ const Navbarr = () => {
           <Container>
             {isLogin ? (
               <>
-                  <Sidebar />
+                <div fixed="top">
+                </div>
                 <Navbar.Toggle
                   aria-controls={`offcanvasNavbar-expand-${expand}`}
                 />
@@ -55,7 +57,6 @@ const Navbarr = () => {
                   placement="end"
                 >
                   <Offcanvas.Header closeButton>
-
                     <Offcanvas.Title
                       id={`offcanvasNavbarLabel-expand-${expand}`}
                     >
@@ -67,7 +68,7 @@ const Navbarr = () => {
                       <Navbar.Text>Sign in as :</Navbar.Text>
                       <NavDropdown
                         variant="dark"
-                        title={ <span className="text-gray-500 ">{name}</span>}
+                        title={<span className="text-gray-500 ">{name}</span>}
                         id={`offcanvasNavbarDropdown-expand-${expand}`}
                       >
                         <NavDropdown.Item href="#action3">
@@ -84,13 +85,41 @@ const Navbarr = () => {
               </>
             ) : (
               <>
-            <Navbar.Brand href="#">YouCanMakeIt</Navbar.Brand>
-              <Nav className=" nav-links">
-                      <Nav.Link href="/" className="nav-link">Home</Nav.Link>
-                      <Nav.Link href="/recipelist" className="nav-link">Recipes</Nav.Link>
-                      <Nav.Link href="#action3" className="nav-link">About</Nav.Link>
+                <Navbar.Brand href="#">YouCanMakeIt</Navbar.Brand>
+                <Navbar.Toggle
+                  aria-controls={`offcanvasNavbar-expand-${expand}`}
+                />
+                <Navbar.Offcanvas
+                  id={`offcanvasNavbar-expand-${expand}`}
+                  aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+                  placement="end"
+                >
+                  <Offcanvas.Header closeButton>
+                    <Offcanvas.Title
+                      id={`offcanvasNavbarLabel-expand-${expand}`}
+                    >
+                      Offcanvas
+                    </Offcanvas.Title>
+                  </Offcanvas.Header>
+                  <Offcanvas.Body>
+                    <Nav className="m-auto nav-links">
+                      <Nav.Link className="nav-linked" as={Link} to="/">
+                        Home
+                      </Nav.Link>
+                      <Nav.Link className="nav-linked" as={Link} to="/recipelist">
+                        Recipes
+                      </Nav.Link>
+                      <Nav.Link className="nav-linked" as={Link} to="/about">
+                        About
+                      </Nav.Link>
                     </Nav>
-                <Button href="/signin" id="btnLognav">Sign In</Button>
+                    <Form className="d-flex form-button">
+                      <Button href="/signin" className="btnLognav">
+                        Sign In
+                      </Button>
+                    </Form>
+                  </Offcanvas.Body>
+                </Navbar.Offcanvas>
               </>
             )}
           </Container>

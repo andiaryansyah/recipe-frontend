@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import Footer from "../../components/footer/Footer";
 import Silde1 from "../../assets/img/BGSignin.jpg";
 import "./AboutUs.css";
@@ -7,13 +7,12 @@ import "./AboutUs.css";
 const AboutUs = () => {
   return (
     <>
-    <Container>
-      <Row className="mt-5 mb-5">
-        <Col className="hero mt-4">
-   
-        <img src={Silde1} alt="breakfast" width={600}/>
+    <div className="about-row">
+      <Row xs={1} sm={1} md={1} lg={2} >
+        <Col className="about-hero mt-4">
+        <img src={Silde1} alt="breakfast" className="about-img"/>
       </Col>
-      <Col className="about mb-2">
+      <Col className="about-title mb-2">
         <h1>About</h1>
         <p className="mb-3">
           Cooking is one of the best creative hobbies for stress-relief. If you
@@ -31,7 +30,7 @@ const AboutUs = () => {
         </p>
       </Col>
       </Row>
-      </Container>
+      </div>
       <Footer />
     </>
   );

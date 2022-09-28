@@ -9,9 +9,9 @@ import "./Homepage.css";
 const Homepage = () => {
   return (
     <>
-      <div style={{ fontFamily: "belleza" }}>
+      <div className="carousel-style">
         <Carousel>
-          <Carousel.Item interval={2000}>
+          <Carousel.Item>
             <Row>
               <Col className="p-0">
                 <img
@@ -21,16 +21,9 @@ const Homepage = () => {
                   height={500}
                 />
               </Col>
-              <Col
-                className="p-0"
-                style={{
-                  backgroundColor: "#36654f",
-                  color: "white",
-                  textAlign: "center",
-                }}
-              >
+              <Col className="slide-column bg-color1">
                 <div className="d-flex align-items-center justify-content-center mt-5 pt-5">
-                  <h1>Creating your cookbook is so simple.</h1>
+                  <h2>Creating your cookbook is so simple.</h2>
                 </div>
                 <div className="p-5">
                   <p>
@@ -47,7 +40,7 @@ const Homepage = () => {
               </Col>
             </Row>
           </Carousel.Item>
-          <Carousel.Item interval={1000}>
+          <Carousel.Item>
             <Row>
               <Col className="p-0">
                 <img
@@ -57,16 +50,9 @@ const Homepage = () => {
                   height={500}
                 />
               </Col>
-              <Col
-                className="p-0"
-                style={{
-                  backgroundColor: "#B37C57",
-                  color: "white",
-                  textAlign: "center",
-                }}
-              >
+              <Col className="slide-column bg-color2">
                 <div className="d-flex align-items-center justify-content-center mt-5 pt-5">
-                  <h1>Cooking With Fire</h1>
+                  <h2>Cooking With Fire</h2>
                 </div>
                 <div className="p-5">
                   <p>
@@ -86,35 +72,35 @@ const Homepage = () => {
         </Carousel>
 
         <Form.Text
-          className="d-flex align-items-center justify-content-center m-5"
+          className="title"
           muted
-          style={{ textAlign: "center" }}
         >
           <h2>
-            YouCanMakeIt is a recipe platform dedicated to discovering what the
-            delicious (and sometimes terrible) food of fiction actually tastes
-            like.
+            <b>YouCanMakeIt</b> is a recipe platform dedicated to discovering
+            what the delicious (and sometimes terrible) food of fiction actually
+            tastes like.
           </h2>
         </Form.Text>
-        <div className="d-flex align-items-center justify-content-center">
+        <div className="recipe-homelist">
           <Recipe />
         </div>
         <div className="d-flex align-items-center justify-content-center mt-5 mb-5">
-          <Button id="btnRecipes" href="/recipelist">VIEW ALL RECIPES</Button>
+          <Button id="btnRecipes" href="/recipelist">
+            VIEW ALL RECIPES
+          </Button>
         </div>
         <div
-          style={{ width: "79rem", textAlign: "center" }}
-          className="mt-3 mb-5"
+          className="landing-about"
         >
           <Card>
-            <Card.Img variant="top" height={460} src={Silde1} />
-            <Card.ImgOverlay className="mt-5 text-light pt-5">
-              <Card.Title className="mt-3">
+            <Card.Img variant="top" className="about-img" src={Silde1} />
+            <Card.ImgOverlay className="about-overlay">
+              <Card.Title className="about-title">
                 <h1>
-                  <b>SUPPORT US</b>
+                  SUPPORT US
                 </h1>
               </Card.Title>
-              <Card.Text className="mt-5 cardText">
+              <Card.Text className="cardText">
                 Get insider access to news around the innovations, culinary
                 concepts, insights, and more.. Have a great idea? Connect with
                 us. Together, we can whip up something wonderful.

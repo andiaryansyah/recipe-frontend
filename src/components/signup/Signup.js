@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Form, Row, Col, Card, Button } from "react-bootstrap";
-import bg from "../../assets/img/new.jpg";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./signup.css";
@@ -37,14 +36,18 @@ const Signup = () => {
   };
 
   return (
-    <>
-    <Row>
-      <Col>
-      <Card className="bg-dark text-dark" id="Card">
-        <Card.Img src={bg} alt="Card image" height={573} />
-      </Card>
-      </Col>
-      <Col>
+    <div className="signup-style">
+      <Row>
+        <Col>
+          <div>
+            <img
+              src="https://hips.hearstapps.com/hmg-prod/images/1lo-1651782941.jpg"
+              alt="..."
+              className="signup-img"
+            />
+          </div>
+        </Col>
+        <Col className="form-signup"  >
           <div className="center">
             <Form
               className="container mt-5 p-4"
@@ -52,17 +55,17 @@ const Signup = () => {
               onSubmit={Register}
             >
               <div className="center">
-                <h2><b>CREATE AN ACCOUNT</b></h2>
+                <h2>
+                  <b>CREATE AN ACCOUNT</b>
+                </h2>
               </div>
-              <h5 className="center mb-2">
-                {msg}
-              </h5>
+              <h5 className="center mb-2">{msg}</h5>
               <Form.Group>
                 <Row>
                   <Col>
                     <Form.Control
                       placeholder="First name"
-                      className="mt-4"
+                      className="mt-4 form-input"
                       value={firstName}
                       onChange={(e) => setFirstName(e.target.value)}
                     />
@@ -70,7 +73,7 @@ const Signup = () => {
                   <Col>
                     <Form.Control
                       placeholder="Last name"
-                      className="mt-4"
+                      className="mt-4 form-input"
                       value={lastName}
                       onChange={(e) => setLastName(e.target.value)}
                     />
@@ -79,6 +82,7 @@ const Signup = () => {
               </Form.Group>
               <Form.Group className="mt-3" controlId="formGridAddress1">
                 <Form.Control
+                className="form-input"
                   type="email"
                   placeholder="Email"
                   value={email}
@@ -86,15 +90,16 @@ const Signup = () => {
                 />
               </Form.Group>
               <Form.Group
-                className="mt-3"
+                className="mt-3 form-input"
                 controlId="formGridPassword"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               >
-                <Form.Control type="password" placeholder="Password" />
+                <Form.Control className="form-input" type="password" placeholder="Password" />
               </Form.Group>
               <Form.Group className="mt-3" controlId="formGridPassword">
                 <Form.Control
+                className="form-input"
                   type="password"
                   placeholder="Confirm Password"
                   value={confPassword}
@@ -103,6 +108,7 @@ const Signup = () => {
               </Form.Group>
               <Form.Group className="mt-3" controlId="formGridPassword">
                 <Form.Control
+                className="form-input"
                   placeholder="Phone Number"
                   value={phone_number}
                   onChange={(e) => setPhoneNumber(e.target.value)}
@@ -113,17 +119,14 @@ const Signup = () => {
                   Create Account
                 </Button>
               </Form.Group>
-              <Card.Link
-                className="mt-4 center cursorLink"
-                href="/signin"
-              >
+              <Card.Link className="mt-4 center cursorLink" href="/signin">
                 Already have Account
               </Card.Link>
             </Form>
           </div>
         </Col>
       </Row>
-    </>
+    </div>
   );
 };
 

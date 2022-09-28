@@ -1,5 +1,23 @@
+.carousel-style .slide-column {
+  color: white;
+  text-align: center;
+}
+
+.carousel-style .bg-color1 {
+  background-color: rgb(54, 101, 79);
+}
+
+.carousel-style .bg-color2 {
+  background-color: rgb(179, 124, 87);
+}
+
+.carousel-style .recipe-homelist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #btnSlide1 {
-    font-family: 'Ubuntu', sans-serif;
     position: relative;
     font-weight: bold;
     font-size: 0.9rem;
@@ -31,7 +49,6 @@
   }
 
   #btnSlide2 {
-    font-family: 'Ubuntu', sans-serif;
     position: relative;
     font-weight: bold;
     font-size: 0.9rem;
@@ -63,7 +80,6 @@
   }
 
   #btnRecipes {
-    font-family: 'Ubuntu', sans-serif;
     position: relative;
     font-weight: 400;
     font-size: 0.9rem;
@@ -94,8 +110,43 @@
     border: none;
   }
 
+  .carousel-style .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+    text-align: center;
+  }
+
+  .carousel-style .landing-about {
+    width: 100%;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .carousel-style .landing-about .about-overlay {
+    color: #fff;
+    padding-top: 5rem;
+  }
+
+  .carousel-style .landing-about .about-img{
+    height: 460px;
+  }
+
+  .carousel-style .landing-about .about-title h1{
+    font-weight: bold;
+  }
+
+  .carousel-style .landing-about .cardText {
+    margin-top: 3rem;
+    padding-left: 200px;
+    padding-right: 200px;
+    font-size: 22px;
+   line-height: 35px;
+  }
+
   #btnAbout {
-    font-family: 'Ubuntu', sans-serif;
     position: relative;
     font-weight: 400;
     font-size: 0.9rem;
@@ -126,14 +177,85 @@
     border: none;
   }
 
-  .change {
-    background-color: red;
-    opacity: 20%;
+  @media screen and (max-width: 992px){
+    
+    .carousel-style .landing-about .about-img{
+      height: 420px;
+    }
+  
+    .carousel-style .landing-about .about-title h1{
+      font-size: 28px;
+    }
+  
+    .carousel-style .landing-about .cardText {
+        font-size: 18px;
+        margin-top: 1rem;
+        padding-left: 120px;
+        padding-right: 120px;
+        line-height: 30px;
   }
 
-  .cardText {
-    padding-left: 200px;
-    padding-right: 200px;
-    font-size: 22px;
-   line-height: 35px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .carousel-style .slide-column {
+        position: absolute;
+        padding-bottom: 150px;
+        left: 0;
+    }
+
+    .carousel-style .bg-color1 {
+      background-color: rgb(54, 101, 79, 0.4);
+    }
+    
+    .carousel-style .bg-color2 {
+      background-color: rgb(179, 124, 87, 0.4);
+    }
+
+    .carousel-style .title h2 {
+      font-size: 27px;
+    }
+
+    .carousel-style .landing-about .about-overlay {
+      padding-top: 2rem;
+    }
+
+    .carousel-style .landing-about .about-img{
+      height: 380px;
+    }
+  
+    .carousel-style .landing-about .about-title h1{
+      font-size: 34px;
+    }
+  
+    .carousel-style .landing-about .cardText {
+        font-size: 20px;
+        padding-left: 60px;
+        padding-right: 60px;
+        line-height: 37px;
+  }
+
+  }
+
+  @media screen and (max-width: 576px) {
+
+    .carousel-style .title h2 {
+      font-size: 23px;
+    }
+
+    .carousel-style .landing-about .about-overlay {
+      padding-top: 1.5rem;
+    }
+
+    .carousel-style .landing-about .about-title h1{
+      font-size: 28px;
+    }
+
+    .carousel-style .landing-about .cardText {
+      font-size: 18px;
+      padding-left: 40px;
+      padding-right: 40px;
+      line-height: 27px;
+}
+
   }

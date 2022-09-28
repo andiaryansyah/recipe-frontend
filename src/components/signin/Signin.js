@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import bg from "../../assets/img/new.jpg";
 import { Card, Form, Button, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
@@ -15,10 +14,13 @@ const Signin = () => {
   const Auth = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://secure-falls-46921.herokuapp.com/api/login", {
-        email: email,
-        password: password,
-      });
+      const response = await axios.post(
+        "https://secure-falls-46921.herokuapp.com/api/login",
+        {
+          email: email,
+          password: password,
+        }
+      );
       Cookies.set("accessToken", response.data.accessToken);
       navigate("/dashboard");
     } catch (error) {
@@ -28,75 +30,68 @@ const Signin = () => {
     }
   };
   return (
-    <>
+    <div className="signin-style">
       <Row>
-      <Col>
-        <Card className="bg-dark text-dark " id="Card">
-          
-          <Card.Img src={bg} alt="Card image" height={573} />
-          </Card>
-          </Col>
-          <Col className="mt-5">
-            <Card.Title className=" mt-5 center">
-              <h1>
-                <b>SIGN IN TO YOUR ACCOUNT</b>
-              </h1>
-            </Card.Title>
-            <div className="center">
+        <Col>
+          <div>
+            <img
+              src="https://i.pinimg.com/originals/cb/1d/11/cb1d11993d6e924c9156f6068da667fb.jpg"
+              alt="..."
+              className="signin-img"
+            />
+          </div>
+        </Col>
+        <Col className="form-signin">
+          <Card.Title className=" mt-5 text-center">
+            <h1>
+              <b>SIGN IN TO YOUR ACCOUNT</b>
+            </h1>
+          </Card.Title>
+          <div className="center">
             <Form onSubmit={Auth} className="mt-3" style={{ width: "450px" }}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                {/* <Form.Label className="d-flex align-items-center justify-content-center">
-                <h4>Email address</h4>
-              </Form.Label> */}
                 <div className="center">
                   <Form.Control
                     type="email"
                     placeholder="Enter email"
                     value={email}
-                    style={{
-                      width: "500px",
-                    }}
+                    className="form-control"
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
               </Form.Group>
-
               <Form.Group className="mb-4" controlId="formBasicPassword">
-                {/* <Form.Label className="d-flex align-items-center justify-content-center">
-                <h4>Password</h4>
-              </Form.Label> */}
                 <div className="center">
                   <Form.Control
                     type="password"
                     placeholder="Password"
-                    style={{ width: "500px" }}
+                    className="form-control"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
               </Form.Group>
-              <h5 className="mb-2 center">
-                {msg}
-              </h5>
-              <div  className="mb-4 center">
+              <h5 className="mb-2 center">{msg}</h5>
+              <div className="mb-4 center">
                 <Button id="btnLogin" type="submit">
                   Login
                 </Button>
               </div>
-              <div className="center">
-                <Card.Link className="cursorLink" style={{ marginRight: "30px" }}>
+              <div className="links">
+                <Card.Link
+                  className="cursorLink"
+                >
                   forgot your password ?
                 </Card.Link>
-                <Card.Link className="cursorLink" href="/signup">
+                <Card.Link className="cursorLink" style={{marginRight:"0px"}} href="/signup">
                   do not have account ?
                 </Card.Link>
               </div>
-              </Form>
-            </div>
-          </Col>
-       
-        </Row>
-    </>
+            </Form>
+          </div>
+        </Col>
+      </Row>
+    </div>
   );
 };
 

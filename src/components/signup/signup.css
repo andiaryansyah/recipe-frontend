@@ -1,4 +1,10 @@
-#btnSignup {
+.signup-style .signup-img {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.signup-style #btnSignup {
     font-family: 'Ubuntu', sans-serif;
     position: relative;
     font-weight: 400;
@@ -24,28 +30,69 @@
     color:white;
   }
   
-  #btnSignup:hover{
-    background-color: white;
-    color:#131212;
-    border:solid #131212;
-  }
-
-  .cursorLink {
+  .signup-style .cursorLink {
     cursor: pointer;
     color: black;
     margin-top: 12px;
   }
   
-  .cursorLink:hover {
+  .signup-style .cursorLink:hover {
     color: rgb(84, 84, 84);
   }
 
-  .center{
+  .signup-style .center{
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  .signup-style #btnSignup:hover{
+    background-color: white;
+    color:#131212;
+    border:solid #131212;
+  }
 
-  #Card {
-    border-radius: 0;
+
+  @media screen and (max-width: 1040px) {
+    .signup-style .form-signup {
+      position: absolute;
+      background: #fff;
+      left: 23%;
+      padding-bottom: 50px;
+      top: 17%;
+      width: 70%;
+      box-shadow: 0 12px 35px 0 rgba(16, 39, 112, .25);
+      max-width: 550px;
+    }
+  }
+  
+  @media screen and (max-width: 840px){
+    .signup-style .form-signup {
+      left: 15%;
+      padding-bottom: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 668px){
+    .signup-style .form-signup {
+      left: 13%;
+    }
+
+    .signup-style .form-signup .form-input::placeholder {
+      font-size: 15px;
+    }
+  }
+  
+  @media screen and (max-width:576px){
+    .signup-style .form-signup {
+      left: 14%;
+    }
+
+    .signup-style .form-signup .form-input::placeholder {
+      font-size: 12px;
+    }
+  
+    .signup-style .form-signup h2 {
+      font-size: 22px;
+      text-align: center;
+    }
   }

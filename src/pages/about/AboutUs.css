@@ -1,4 +1,14 @@
-.about {
+.about-row {
+  margin: 5rem 5rem;
+  
+}
+
+.about-row .about-hero .about-img {
+  height: 350px;
+  width: 100%;
+}
+
+.about-row .about-title {
     text-align: left;
     /* background-color: #ccc; */
     margin: 0;
@@ -10,23 +20,34 @@
     flex-direction: column;
   }
 
-  .about h2 {
+  .about-row .about h2 {
     font-size: 30px;
     margin-bottom:10px;
   }
   
   @media (max-width:767px){
-    .about h2 {
+    .about-row .about h2 {
       font-size: 20px;
     }
   }
   
-  .hero {
+  .about-row .hero {
   display: flex;
   padding: 20px;
-  width: 95vw;
+  width: 100%;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
   /* height: 90vh; */
+  }
+
+  @media screen and (max-width: 992px){
+    .about-row {
+      margin: 0 2rem;
+    }
+
+    .about-row .about-hero .about-img {
+      height: 450px;
+      width: 100%;
+    }
   }

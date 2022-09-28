@@ -11,6 +11,10 @@ const Recipe = () => {
   const {filterRecipe} = useSelector(state => state.recipe);
   const {recipe} = useSelector(state => state.recipe);
 
+  const recipePerPage = 6;
+
+  const numberOfRecords = 0;
+
   useEffect(() => {
     dispatch(getRecipes());
   }, [dispatch]);
@@ -20,13 +24,18 @@ useEffect(() => {
    // eslint-disable-next-line
 }, [recipe]);
 
+const displayRecipes = filterRecipe.slice(
+    numberOfRecords,
+    numberOfRecords + recipePerPage
+  );
+
   return (
-    <div className="container">
+    <div className="container recipe-style">
       {/* {filterRecipe.length === 0 ? 
       <h1>Not Found</h1> : */}
-        <Row xs={1} md={3} className="g-4 center">
-          {filterRecipe && filterRecipe.map((recipe) => (
-            <Col key={recipe.id}>
+        <Row sm={1} md={2} lg={2} xl={3} className="g-4">
+          {displayRecipes && displayRecipes.map((recipe) => (
+            <Col key={recipe.id} className="recipe-column">
               <Card 
                 style={{ width: "23rem" }}
                 className=" border border-0px border-dark"

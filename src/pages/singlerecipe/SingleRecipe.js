@@ -34,7 +34,7 @@ const SingleRecipe = () => {
     return (
         <div className="recipe_container">
         <div className="recipe_pic">
-          <img src={url} alt="" />
+          <img src={url} alt="..."/>
         </div>
 
         <div className="single_recipe">

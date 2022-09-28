@@ -4,13 +4,16 @@
     justify-content: center;
   }
 
-  #title {
+  .recipelist-style #title {
     font-size: 30px;
     font-weight: bold;
   }
 
+  .recipelist-style .recipelist-img {
+    width: 350px;
+  }
+
   .details {
-    font-family:Arial, Helvetica, sans-serif;
     transition: all 150ms linear;
     text-decoration: none;
     color: #a46904;
@@ -27,6 +30,7 @@
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: auto;
     padding-top: 40px;
   }
@@ -53,4 +57,17 @@
   .navigationDisabled a {
     color: grey;
     background-color: #724a04;
+  }
+
+  @media screen and (max-width: 1040px) {
+    .recipelist-style .recipelist-img {
+      width: 310px;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .recipelist-style .recipelist-img {
+      width: 330px;
+      margin: auto;
+    }
   }

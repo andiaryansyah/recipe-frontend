@@ -45,13 +45,12 @@ const RecipeList = () => {
           {filterRecipe.length === 0 ? (
             <h1 className = "center">Not Found</h1>
           ) : (
-            <div className="mb-5">
-              <Row xs={1} md={3} className="g-4 center">
+            <div className="mb-5 recipelist-style">
+              <Row xs={1} md={2} lg={3} xxl={3} className="g-4">
                 {displayRecipes.map((recipe) => (
-                  <Col key={recipe.id}>
+                  <Col key={recipe.id }>
                     <Card
-                      style={{ width: "23rem" }}
-                      className=" border border-0px border-dark"
+                      className=" border border-0px border-dark recipelist-img"
                     >
                       <Card.Img
                         variant="top"

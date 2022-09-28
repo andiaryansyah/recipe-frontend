@@ -1,3 +1,7 @@
+.d-recipe .row {
+    column-gap: 10px;
+}
+
 #btnEdit {
     width: 4.7rem;
     margin-right: 0.5rem;
@@ -12,7 +16,7 @@
 } */
 
 #btnDelete {
-    width: 4.7rem;
+    width: 4.9rem;
     margin-right: 0.5rem;
     /* border: solid 2px #f11b1b;
     background-color: #fd9393;

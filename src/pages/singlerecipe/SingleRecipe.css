@@ -3,11 +3,11 @@
 }
 .recipe_pic {
   width: 50%;
-  height: 90vh;
+  height: 91vh;
   
 }
 .recipe_pic img {
-  height: 90vh;
+  height: 91vh;
   width:100%;
   object-fit:cover;
 }
